@@ -1,0 +1,81 @@
+﻿@model Assignment1_Apple.Models.APPLE
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>APPLE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LOCATION_CODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOCATION_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ADDRESS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADDRESS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROVINCE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROVINCE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COUNTRY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COUNTRY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUSTOMER_CARE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUSTOMER_CARE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCTS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCTS)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

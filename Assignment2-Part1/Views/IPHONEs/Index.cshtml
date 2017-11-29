@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Assignment1_Apple.Models.IPHONE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Iphone</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            ADDRESS
+        </th>
+        <th> 
+            PRODUCT NAME
+        </th>
+        <th>
+           PRODUCT SERIES
+        </th>
+        <th>
+            PRODUCT STORAGE
+        </th>
+        <th>
+            PRODUCT PROCESSOR
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.APPLE.ADDRESS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUCT_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUCT_SERIES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUCT_STORAGE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUCT_PROCESSOR)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SERIAL_NO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SERIAL_NO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SERIAL_NO })
+        </td>
+    </tr>
+}
+
+</table>
