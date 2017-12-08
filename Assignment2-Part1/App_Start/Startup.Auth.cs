@@ -56,10 +56,6 @@ namespace Assignment2_Part1
                 clientId: ConfigurationManager.AppSettings["MicrosoftClientID"],
                 clientSecret: ConfigurationManager.AppSettings["MicrosoftClientSecret"]);
 
-            app.UseTwitterAuthentication(
-                  consumerKey: ConfigurationManager.AppSettings["TwitterConsumerKey"],
-                  consumerSecret: ConfigurationManager.AppSettings["TwitterConsumerSecret"]);
-
             app.UseFacebookAuthentication(
                appId: ConfigurationManager.AppSettings["FacebookAppId"],
                appSecret: ConfigurationManager.AppSettings["FacebookAppSecret"]);
@@ -68,7 +64,10 @@ namespace Assignment2_Part1
             {
                 ClientId = ConfigurationManager.AppSettings["GoogleClientId"],
                 ClientSecret = ConfigurationManager.AppSettings["GoogleClientSecret"]
-            });
+            }
+
+            
+            );
         }
     }
 }

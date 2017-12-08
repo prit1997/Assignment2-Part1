@@ -10,6 +10,7 @@ using Assignment1_Apple.Models;
 
 namespace Assignment1_Apple.Controllers
 {
+    [Authorize]
     public class IPHONEsController : Controller
     {
         private AppleModel db = new AppleModel();

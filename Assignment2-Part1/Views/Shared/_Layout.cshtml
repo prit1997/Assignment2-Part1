@@ -18,9 +18,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="http://comp2007-assignment1-apple.azurewebsites.net/" title="Apple Site">
+                <a href="https://comp2007-assignment2-part1.azurewebsites.net/" title="Apple Site">
                     <img src="~/Content/Images/Apple.png" alt="Apple Home Page" style="margin-bottom">
-                   <!--  @Html.ActionLink("Apple", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" }) -->
+                  <!-- @Html.ActionLink("Apple", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" }) -->  
                 </a>
                    
 
@@ -29,7 +29,9 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Apple", "Index", "APPLEs")</li>
+                   @if(User.Identity.IsAuthenticated){
                     <li>@Html.ActionLink("iPhones", "Index", "IPHONEs")</li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
