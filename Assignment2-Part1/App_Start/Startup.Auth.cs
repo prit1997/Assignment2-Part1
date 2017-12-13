@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
+using Owin.Security.Providers.Yahoo;
 using Owin;
 using Assignment2_Part1.Models;
 using System.Configuration;
@@ -64,10 +65,10 @@ namespace Assignment2_Part1
             {
                 ClientId = ConfigurationManager.AppSettings["GoogleClientId"],
                 ClientSecret = ConfigurationManager.AppSettings["GoogleClientSecret"]
-            }
+            });
 
             
-            );
+                
         }
     }
 }
