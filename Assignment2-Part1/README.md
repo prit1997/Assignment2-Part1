@@ -1,8 +1,6 @@
 ﻿<p align="center">
-  <b>Link to LiveWebsite</b><br>
-  <a href="https://comp2007-assignment2-part1.azurewebsites.net/">Apple Store</a> |
-  <br><br>
-  <img src="~/Content/Images/forReadme.png">
+  <h1><b>Link to LiveWebsite</b><br></h1>
+  <h2><a href="https://comp2007-assignment2-part1.azurewebsites.net/">Apple Store</a></h2>
 </p>
 /////////////////////////////////////////////////////////////////////////////
 <h3>Use:</h3>
@@ -25,13 +23,13 @@
 
 *implemented an additional Social login provider.
 
-*<img src="~/Content/Images/favicon.ico">FAVICON to the PAGE.
+*Bookmark icon/Webpage icon to the PAGE.
 
 *image Buttons which is Working Successfully.
 
 *geotagging the apple store through maps. 
 
-*LIVE CHAT on the right corner of the app if user have some doubt.
+*LIVE EMAIL on the right corner of the app if user have some doubt.
 
 /////////////////////////////////////////////////////////////////////////////
 <h3>References:</h3>
