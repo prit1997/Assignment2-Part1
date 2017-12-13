@@ -1,0 +1,75 @@
+﻿@model Assignment1_Apple.Models.APPLE
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>APPLE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LOCATION_CODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOCATION_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ADDRESS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADDRESS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROVINCE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROVINCE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COUNTRY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COUNTRY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUSTOMER_CARE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUSTOMER_CARE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCTS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCTS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PRODUCT_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

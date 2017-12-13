@@ -28,11 +28,12 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Apple", "Index", "APPLEs")</li>
+                    <li>@Html.ActionLink("Apple","Index","APPLEs1")</li>
                    @if (User.Identity.IsAuthenticated)
                    {
+                    <li>@Html.ActionLink("Apple Store Location", "Index", "APPLEs")</li>
                     <li>@Html.ActionLink("iPhones", "Index", "IPHONEs")</li>
-                    }
+                   }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

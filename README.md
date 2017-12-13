@@ -29,7 +29,6 @@
 
 *LIVE EMAIL on the right corner of the app if user have some doubt.
 
-*Added TWO FACTOR AUTH.
 /////////////////////////////////////////////////////////////////////////////
 <h3>References:</h3>
 

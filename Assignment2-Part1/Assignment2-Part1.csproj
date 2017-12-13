@@ -391,6 +391,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\APPLEs1Controller.cs" />
     <Compile Include="Controllers\APPLEsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IPHONEsController.cs" />
@@ -524,6 +525,11 @@
     <Content Include="Views\IPHONEs\Index.cshtml" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Views\APPLEs1\Create.cshtml" />
+    <Content Include="Views\APPLEs1\Delete.cshtml" />
+    <Content Include="Views\APPLEs1\Details.cshtml" />
+    <Content Include="Views\APPLEs1\Edit.cshtml" />
+    <Content Include="Views\APPLEs1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

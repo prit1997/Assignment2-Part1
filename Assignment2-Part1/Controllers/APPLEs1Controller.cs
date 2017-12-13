@@ -8,20 +8,19 @@ using System.Web;
 using System.Web.Mvc;
 using Assignment1_Apple.Models;
 
-namespace Assignment1_Apple.Controllers
+namespace Assignment2_Part1.Controllers
 {
-    [Authorize]
-    public class APPLEsController : Controller
+    public class APPLEs1Controller : Controller
     {
         private AppleModel db = new AppleModel();
 
-        // GET: APPLEs
+        // GET: APPLEs1
         public ActionResult Index()
         {
             return View(db.APPLEs.ToList());
         }
 
-        // GET: APPLEs/Details/5
+        // GET: APPLEs1/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,13 +35,13 @@ namespace Assignment1_Apple.Controllers
             return View(aPPLE);
         }
 
-        // GET: APPLEs/Create
+        // GET: APPLEs1/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: APPLEs/Create
+        // POST: APPLEs1/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,7 +58,7 @@ namespace Assignment1_Apple.Controllers
             return View(aPPLE);
         }
 
-        // GET: APPLEs/Edit/5
+        // GET: APPLEs1/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -74,7 +73,7 @@ namespace Assignment1_Apple.Controllers
             return View(aPPLE);
         }
 
-        // POST: APPLEs/Edit/5
+        // POST: APPLEs1/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,7 +89,7 @@ namespace Assignment1_Apple.Controllers
             return View(aPPLE);
         }
 
-        // GET: APPLEs/Delete/5
+        // GET: APPLEs1/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -105,7 +104,7 @@ namespace Assignment1_Apple.Controllers
             return View(aPPLE);
         }
 
-        // POST: APPLEs/Delete/5
+        // POST: APPLEs1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
