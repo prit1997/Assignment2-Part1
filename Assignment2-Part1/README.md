@@ -1,4 +1,5 @@
-﻿ <h1>LiveWebsite:<a href="https://comp2007-assignment2-part1.azurewebsites.net/"><b>Apple Store</b></a></h1>
+﻿ <h1>LiveWebsite:<a href="https://comp2007-assignment2-part1.azurewebsites.net/"><b> Apple Store</b></a></h1>
+
 /////////////////////////////////////////////////////////////////////////////
 <h3>Use:</h3>
 
@@ -28,7 +29,6 @@
 
 *LIVE EMAIL on the right corner of the app if user have some doubt.
 
-*Added TWO FACTOR AUTH.
 /////////////////////////////////////////////////////////////////////////////
 <h3>References:</h3>
 
