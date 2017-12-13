@@ -431,6 +431,7 @@
     <Content Include="Content\Images\contactsupport.png" />
     <Content Include="Content\Images\facebook.png" />
     <Content Include="Content\Images\favicon.ico" />
+    <Content Include="Content\Images\forReadme.png" />
     <Content Include="Content\Images\GitHub.png" />
     <Content Include="Content\Images\linkedin.png" />
     <Content Include="Content\Images\livechat.png" />

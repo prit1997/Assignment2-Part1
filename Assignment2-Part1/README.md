@@ -1,7 +1,5 @@
-﻿<p align="center">
-  <h1><b>Link to LiveWebsite</b><br></h1>
-  <h2><a href="https://comp2007-assignment2-part1.azurewebsites.net/">Apple Store</a></h2>
-</p>
+﻿  <h1><b>Link to LiveWebsite:</b></h1 <h2><a href="https://comp2007-assignment2-part1.azurewebsites.net/">Apple Store</a></h2>
+
 /////////////////////////////////////////////////////////////////////////////
 <h3>Use:</h3>
 

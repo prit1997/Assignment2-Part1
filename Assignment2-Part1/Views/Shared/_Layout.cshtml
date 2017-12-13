@@ -29,7 +29,8 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Apple", "Index", "APPLEs")</li>
-                   @if(User.Identity.IsAuthenticated){
+                   @if (User.Identity.IsAuthenticated)
+                   {
                     <li>@Html.ActionLink("iPhones", "Index", "IPHONEs")</li>
                     }
                 </ul>
