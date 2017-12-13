@@ -1,11 +1,43 @@
-﻿This is my Assignment 2 Part 1 of Enterprice Computing
+﻿========================================================================================
+    <center><h2>  ASP.NET MVC APPLICATION : Apple Store </h2></center>
+	<center><h2> https://comp2007-assignment2-part1.azurewebsites.net </center>
+========================================================================================
 
-Apple Store is a free Apple Online Store which Store the Address of the stores and the Products they are selling in different Country and location given helps the user to navigate towards Direction.
+/////////////////////////////////////////////////////////////////////////////
+Use:
 
-Not Taught
-Also change the Website FavIcon
+ *the project illustrates to find the store location and helps the user to checks the Stock available in the Store or not. 
 
+/////////////////////////////////////////////////////////////////////////////
+<h3>Demo:</h3>
+  
+*open the project
 
-I have change the coloumn name into View table
+*click on the icon link to view the detail of each.. 
 
-Here is the Link of my Live Website :- https://comp2007-assignment2-part1.azurewebsites.net/
+*click on the Register and Login links to your navbar that link to the auto-generated Account/Register and Account/Login views
+
+*click any Social Login Provider to Login with the Social Network id. 
+
+/////////////////////////////////////////////////////////////////////////////
+<h3>Bonous:</h3>
+
+*implemented an additional Social login provider.
+
+*FAVICON to the PAGE.
+
+*image Buttons which is Working Successfully.
+
+*geotagging the apple store through maps. 
+
+*LIVE CHAT on the right corner of the app if user have some doubt.
+
+/////////////////////////////////////////////////////////////////////////////
+<h3>References:</h3>
+
+#old projects of WEB DSIGN
+
+#ASP.NET MVC Tutorials
+http://www.asp.net/Learn/mvc/
+
+/////////////////////////////////////////////////////////////////////////////

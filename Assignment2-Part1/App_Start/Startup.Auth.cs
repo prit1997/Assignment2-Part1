@@ -5,6 +5,8 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin.Security.Providers.Yahoo;
+using Owin.Security.Providers.LinkedIn;
+
 using Owin;
 using Assignment2_Part1.Models;
 using System.Configuration;
@@ -67,8 +69,10 @@ namespace Assignment2_Part1
                 ClientSecret = ConfigurationManager.AppSettings["GoogleClientSecret"]
             });
 
-            
-                
+            app.UseLinkedInAuthentication(
+                clientId: ConfigurationManager.AppSettings["LinkedinClientId"],
+                clientSecret: ConfigurationManager.AppSettings["LinkedinClientSecret"]);
+
         }
     }
 }
