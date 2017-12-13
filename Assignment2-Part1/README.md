@@ -1,10 +1,11 @@
-﻿========================================================================================
-    <center><h2>  ASP.NET MVC APPLICATION : Apple Store </h2></center>
-	<center><h2> https://comp2007-assignment2-part1.azurewebsites.net </center>
-========================================================================================
-
+﻿<p align="center">
+  <b>Link to LiveWebsite</b><br>
+  <a href="https://comp2007-assignment2-part1.azurewebsites.net/">Apple Store</a> |
+  <br><br>
+  <img src="~/Content/Images/forReadme.png">
+</p>
 /////////////////////////////////////////////////////////////////////////////
-Use:
+<h3>Use:</h3>
 
  *the project illustrates to find the store location and helps the user to checks the Stock available in the Store or not. 
 
@@ -24,7 +25,7 @@ Use:
 
 *implemented an additional Social login provider.
 
-*FAVICON to the PAGE.
+*<img src="~/Content/Images/favicon.ico">FAVICON to the PAGE.
 
 *image Buttons which is Working Successfully.
 
