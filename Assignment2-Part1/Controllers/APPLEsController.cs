@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assignment2_Part1.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -6,9 +7,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Assignment1_Apple.Models;
 
-namespace Assignment1_Apple.Controllers
+
+namespace Assignment2_Part1.Controllers
 {
     [Authorize]
     public class APPLEsController : Controller

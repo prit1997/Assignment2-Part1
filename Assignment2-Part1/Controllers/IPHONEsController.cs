@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assignment2_Part1.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -6,41 +7,66 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Assignment1_Apple.Models;
 
-namespace Assignment1_Apple.Controllers
+
+namespace Assignment2_Part1.Controllers
 {
     [Authorize]
     public class IPHONEsController : Controller
     {
-        private AppleModel db = new AppleModel();
+
+
+        // repo link
+        private IIPHONEsRepository db;
+
+        // if no param passed to constructor, use EF Repository & DbContext
+        public IPHONEsController()
+        {
+            this.db = new EFIPHONEsRepository();
+        }
+        // if mock repo object passed to constructor, use Mock interface for unit testing
+        public IPHONEsController(IIPHONEsRepository smRepo)
+        {
+            this.db = smRepo;
+        }
 
         // GET: IPHONEs
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            var iPHONEs = db.IPHONEs.Include(i => i.APPLE);
+            var iPHONEs = db.iPHONEs;
             return View(iPHONEs.ToList());
         }
 
-        // GET: IPHONEs/Details/5
-        public ActionResult Details(string id)
+        // POST: StoreManager - for Title Search on Index View
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Index(string iphone)
         {
-            if (id == null)
+            
+
+            ViewBag.IphoneCount = iphone.Count();
+            return View(iphone);
+        }
+
+        // GET: IPHONEs/Details/5
+        public ViewResult Details(int? productID)
+        {
+            if(productID == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return View("Error");
             }
-            IPHONE iPHONE = db.IPHONEs.Find(id);
-            if (iPHONE == null)
+            IPHONE iphone = db.iPHONEs.SingleOrDefault(a => a.PRODUCT_ID == productID);
+            if (iphone == null)
             {
-                return HttpNotFound();
+                return View("Error");
             }
-            return View(iPHONE);
+            return View(iphone);
         }
 
         // GET: IPHONEs/Create
         public ActionResult Create()
         {
-            ViewBag.PRODUCT_ID = new SelectList(db.APPLEs, "PRODUCT_ID", "ADDRESS");
+           
             return View();
         }
 
@@ -49,33 +75,37 @@ namespace Assignment1_Apple.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SERIAL_NO,PRODUCT_ID,PRODUCT_NAME,PRODUCT_SERIES,PRODUCT_STORAGE,PRODUCT_PROCESSOR")] IPHONE iPHONE)
+        public ActionResult Create([Bind(Include = "SERIAL_NO,PRODUCT_ID,PRODUCT_NAME,PRODUCT_SERIES,PRODUCT_STORAGE,PRODUCT_PROCESSOR")] IPHONE iPhone)
         {
             if (ModelState.IsValid)
             {
-                db.IPHONEs.Add(iPHONE);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+                // new repository code for inserting
+                db.Save(iPhone);
 
-            ViewBag.PRODUCT_ID = new SelectList(db.APPLEs, "PRODUCT_ID", "ADDRESS", iPHONE.PRODUCT_ID);
-            return View(iPHONE);
-        }
+                return RedirectToAction("Index");
+
+            }
+            return View("Create", iPhone);
+
+        }      
 
         // GET: IPHONEs/Edit/5
-        public ActionResult Edit(string id)
+        public ViewResult Edit(int? productID)
         {
-            if (id == null)
+            if (productID == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return View("Error");
             }
-            IPHONE iPHONE = db.IPHONEs.Find(id);
-            if (iPHONE == null)
+          
+            // new repository code replacing line above
+            IPHONE iphone = db.iPHONEs.SingleOrDefault(a => a.PRODUCT_ID == productID);
+
+            if (iphone == null)
             {
-                return HttpNotFound();
+                return View("Error");
             }
-            ViewBag.PRODUCT_ID = new SelectList(db.APPLEs, "PRODUCT_ID", "ADDRESS", iPHONE.PRODUCT_ID);
-            return View(iPHONE);
+           
+            return View(iphone);
         }
 
         // POST: IPHONEs/Edit/5
@@ -83,51 +113,65 @@ namespace Assignment1_Apple.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "SERIAL_NO,PRODUCT_ID,PRODUCT_NAME,PRODUCT_SERIES,PRODUCT_STORAGE,PRODUCT_PROCESSOR")] IPHONE iPHONE)
+        public ActionResult Edit([Bind(Include = "SERIAL_NO,PRODUCT_ID,PRODUCT_NAME,PRODUCT_SERIES,PRODUCT_STORAGE,PRODUCT_PROCESSOR")] IPHONE iPhone)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(iPHONE).State = EntityState.Modified;
-                db.SaveChanges();
+
+
+                // repository code - new
+                db.Save(iPhone);
+
                 return RedirectToAction("Index");
             }
-            ViewBag.PRODUCT_ID = new SelectList(db.APPLEs, "PRODUCT_ID", "ADDRESS", iPHONE.PRODUCT_ID);
-            return View(iPHONE);
+            return View("Edit", iPhone);
         }
 
         // GET: IPHONEs/Delete/5
-        public ActionResult Delete(string id)
+        public ViewResult Delete(int? productID)
         {
-            if (id == null)
+            if (productID == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return View("Error");
             }
-            IPHONE iPHONE = db.IPHONEs.Find(id);
-            if (iPHONE == null)
+            
+
+            // new repository code replacing line above
+            IPHONE iphone = db.iPHONEs.SingleOrDefault(a => a.PRODUCT_ID == productID);
+            if (iphone == null)
             {
-                return HttpNotFound();
+                return View("Error");
             }
-            return View(iPHONE);
+            return View(iphone);
         }
 
         // POST: IPHONEs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int? productID)
         {
-            IPHONE iPHONE = db.IPHONEs.Find(id);
-            db.IPHONEs.Remove(iPHONE);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
+            if (productID == null)
             {
-                db.Dispose();
+                return View("Error");
             }
-            base.Dispose(disposing);
+            IPHONE iphone = db.iPHONEs.SingleOrDefault(a => a.PRODUCT_ID == productID);
+            if (iphone == null)
+            {
+                return View("Error");
+            }
+
+            db.Delete(iphone);
+
+            return RedirectToAction("Index");
+
+            //protected override void Dispose(bool disposing)
+            //{
+            //    if (disposing)
+            //    {
+            //        db.Dispose();
+            //    }
+            //    base.Dispose(disposing);
+            //}
         }
-    }
+}
 }

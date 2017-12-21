@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment2-Part1", "Assign
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment2-Part1.Tests", "Assignment2-Part1.Tests\Assignment2-Part1.Tests.csproj", "{B828F7AC-EF1D-4AEA-9A12-819A60CBE999}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{379D9DB8-72DA-48B9-A064-ED57247D6C28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

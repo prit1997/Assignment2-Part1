@@ -1,5 +1,6 @@
-namespace Assignment1_Apple.Models
+namespace Assignment2_Part1.Models
 {
+  
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;

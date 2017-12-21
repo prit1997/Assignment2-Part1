@@ -1,4 +1,4 @@
-﻿ <h1>LiveWebsite:<a href="https://comp2007-assignment2-part1.azurewebsites.net/"><b> Apple Store</b></a></h1>
+﻿<h1>LiveWebsite:<a href="https://comp2007-assignment2-part1.azurewebsites.net/"><b> Apple Store</b></a></h1>
 
 /////////////////////////////////////////////////////////////////////////////
 <h3>Use:</h3>
@@ -6,7 +6,7 @@
  *the project illustrates to find the store location and helps the user to checks the Stock available in the Store or not. 
 
 /////////////////////////////////////////////////////////////////////////////
-<h3>Demo:</h3>
+<h3>Demo: ASSIGNMENT 2 PART 1</h3>
   
 *open the project
 
@@ -16,6 +16,13 @@
 
 *click any Social Login Provider to Login with the Social Network id. 
 
+/////////////////////////////////////////////////////////////////////////////
+
+<h3>ASSIGNMENT 2 PART 2 <h3>
+
+*done unit Testing for each methods.
+
+*Modified all controllers.
 /////////////////////////////////////////////////////////////////////////////
 <h3>Bonous:</h3>
 
@@ -27,7 +34,7 @@
 
 *geotagging the apple store through maps. 
 
-*LIVE EMAIL on the right corner of the app if user have some doubt.
+*LIVE EMAIL on the right corner of the app hepls user to chat with the customer representative if user have some doubt.
 
 /////////////////////////////////////////////////////////////////////////////
 <h3>References:</h3>
@@ -36,5 +43,7 @@
 
 #ASP.NET MVC Tutorials
 http://www.asp.net/Learn/mvc/
+
+#ASP.NET MVC INCLASS
 
 /////////////////////////////////////////////////////////////////////////////
