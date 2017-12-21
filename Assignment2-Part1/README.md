@@ -6,7 +6,7 @@
  *the project illustrates to find the store location and helps the user to checks the Stock available in the Store or not. 
 
 /////////////////////////////////////////////////////////////////////////////
-<h3>Demo: ASSIGNMENT 2 PART 1</h3>
+<h3>Demo: ASSIGNMENT 2 PART 1 </h3>
   
 *open the project
 
@@ -18,11 +18,12 @@
 
 /////////////////////////////////////////////////////////////////////////////
 
-<h3>ASSIGNMENT 2 PART 2 <h3>
+<h3>ASSIGNMENT 2 PART 2 </h3>
 
 *done unit Testing for each methods.
 
 *Modified all controllers.
+
 /////////////////////////////////////////////////////////////////////////////
 <h3>Bonous:</h3>
 
